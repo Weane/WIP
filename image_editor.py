@@ -3,10 +3,19 @@ import os
 
 
 class ImageEditor:
+    """
+    Image Editor for some custom editing of an images
+    """
     def __init__(self, image):
         self.image = image
 
     def split_image(self, number_of_parts):
+        """
+        Splits image horizontally into defined number of parts and saves them into same
+        name plus underscore and number, which is free
+        :param number_of_parts:
+        :return:
+        """
         width, height = self.image.size
         part_size = width // number_of_parts
         for part_number in range(number_of_parts):
